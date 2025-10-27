@@ -18,10 +18,10 @@ namespace TelegramDemo
 {
     public partial class Form1 : Form
     {
-        int apiId = 22414336; //nhap id của bạn
-        string apiHash = "bb8f5a63ac77b2f95a611104841e9c14";
+        int apiId = 22414336; // the app id 
+        string apiHash = "bb8f5a63ac77b2f95a611104841e9c14"; // api  hash value 
         TelegramClient client;
-        string myPhoneNumber = "+213557148019";
+        string myPhoneNumber = "+213557148019"; // the phone number 
         string hash;
         TLContacts tLContact;
         string userIDSelected;
@@ -34,7 +34,7 @@ namespace TelegramDemo
         {
             File.Delete("session.dat");
              client = new TelegramClient(apiId, apiHash);
-            await client.ConnectAsync();
+             await client.ConnectAsync();
              hash = await client.SendCodeRequestAsync(myPhoneNumber);         
 
         }
